@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.animate-fade-scale-up {
+    animation: fadeScaleUp 1.2s ease-in-out;
+}
+
+.animate-slide-down {
+    animation: slideDown 1s ease-in-out;
+}
+
+.animate-rotate-in {
+    animation: rotateIn 1.2s ease-in-out;
+}
+
+.animate-flip-in {
+    animation: flipIn 1s ease-in-out;
+}
+
+.animate-bounce-in {
+    animation: bounceIn 1s ease-in-out;
+}
+
+.parallax-bg {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.glow-text {
+    text-shadow: 0 0 10px rgba(236, 72, 153, 0.7), 0 0 20px rgba(236, 72, 153, 0.5);
+    transition: text-shadow 0.3s ease;
+}
+
+.glow-hover:hover {
+    text-shadow: 0 0 15px rgba(236, 72, 153, 0.8), 0 0 25px rgba(236, 72, 153, 0.6);
+}
+
+.glow-border {
+    box-shadow: 0 0 15px rgba(236, 72, 153, 0.7);
+    transition: box-shadow 0.3s ease;
+}
+
+.glow-button {
+    box-shadow: 0 0 10px rgba(236, 72, 153, 0.7), 0 0 20px rgba(236, 72, 153, 0.5);
+}
+
+.glow-button:hover {
+    box-shadow: 0 0 15px rgba(236, 72, 153, 0.8), 0 0 25px rgba(236, 72, 153, 0.6);
+}
+
+.glow-input:focus {
+    box-shadow: 0 0 15px rgba(236, 72, 153, 0.8), 0 0 25px rgba(236, 72, 153, 0.6);
+}
+
+@keyframes fadeScaleUp {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes rotateIn {
+    from { transform: rotate(0deg) scale(0.8); opacity: 0; }
+    to { transform: rotate(360deg) scale(1); opacity: 1; }
+}
+
+@keyframes flipIn {
+    from { transform: perspective(1000px) rotateY(-90deg); opacity: 0; }
+    to { transform: perspective(1000px) rotateY(0); opacity: 1; }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+/* 3D transform for cards */
+.transform:hover:-rotate-x-5 {
+    transform: perspective(1000px) rotateX(-5deg) scale(1.05);
+    transition: transform 0.5s ease-in-out;
+}
+
+.transform:hover:-rotate-y-10 {
+    transform: perspective(1000px) rotateY(-10deg) scale(1.05);
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Ensure smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+/* Existing styles remain, update glow-hover */
+.glow-hover:hover {
+  text-shadow: 0 0 15px rgba(147, 51, 234, 0.8), 0 0 25px rgba(147, 51, 234, 0.6); /* Purple-300 glow */
+  transition: text-shadow 0.3s ease;
+}
+
+/* Ensure other glow effects remain consistent with pink accents */
+.glow-text {
+  text-shadow: 0 0 10px rgba(236, 72, 153, 0.7), 0 0 20px rgba(236, 72, 153, 0.5);
+  transition: text-shadow 0.3s ease;
+}
+
+.glow-border {
+  box-shadow: 0 0 15px rgba(236, 72, 153, 0.7);
+  transition: box-shadow 0.3s ease;
+}
+
+.glow-button {
+  box-shadow: 0 0 10px rgba(236, 72, 153, 0.7), 0 0 20px rgba(236, 72, 153, 0.5);
+}
+
+.glow-button:hover {
+  box-shadow: 0 0 15px rgba(236, 72, 153, 0.8), 0 0 25px rgba(236, 72, 153, 0.6);
+}
+
+.glow-input:focus {
+  box-shadow: 0 0 15px rgba(236, 72, 153, 0.8), 0 0 25px rgba(236, 72, 153, 0.6);
+}

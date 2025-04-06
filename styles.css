@@ -123,11 +123,17 @@ html {
 .glow-input:focus {
   box-shadow: 0 0 15px rgba(236, 72, 153, 0.8), 0 0 25px rgba(236, 72, 153, 0.6);
 }
-@media (min-width: 769px) {
-    .circle-nav-toggle, .circle-nav {
-        display: none;
-    }
-    .nav-menu {
-        display: flex; /* Show default nav on larger screens */
-    }
+.circle-nav {
+    display: none; /* Hidden by default */
+}
+.circle-nav-toggle.active + .circle-nav {
+    display: block; /* Show when toggle is active */
+}
+.circle-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.circle-nav li {
+    display: block; /* Ensure all items are visible */
 }

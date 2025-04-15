@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.shishir-thapa.com.np/sitemap.xml
